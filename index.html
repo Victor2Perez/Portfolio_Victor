@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio Victor</title>
+  <style>
+    :root {
+      --azul-escuro: #0D1B2A;
+      --azul-medio: #1B263B;
+      --ciano: #00B4D8;
+      --branco-gelo: #E0E1DD;
+      --verde-limao: #90EE90;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--azul-escuro);
+      color: var(--branco-gelo);
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--azul-medio);
+      padding: 20px 0;
+      text-align: center;
+      border-bottom: 2px solid var(--ciano);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: var(--ciano);
+      letter-spacing: 1px;
+    }
+
+    nav { margin-top: 10px; }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: var(--branco-gelo);
+      font-weight: 500;
+      transition: color 0.3s, transform 0.2s;
+    }
+    nav a:hover {
+      color: var(--verde-limao);
+      transform: scale(1.05);
+    }
+
+    section {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 30px 25px;
+      background-color: var(--azul-medio);
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 180, 216, 0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+      scroll-margin-top: 120px;
+    }
+
+    section.visible { opacity: 1; transform: translateY(0); }
+
+    h2 {
+      color: var(--ciano);
+      border-left: 4px solid var(--ciano);
+      padding-left: 10px;
+      margin-bottom: 15px;
+    }
+
+    a { color: var(--ciano); text-decoration: none; }
+    a:hover { color: var(--verde-limao); }
+
+    .skills ul { list-style: none; padding: 0; }
+    .skills li {
+      background: rgba(224, 225, 221, 0.1);
+      display: inline-block;
+      margin: 5px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--ciano);
+      transition: background 0.3s, transform 0.2s;
+    }
+    .skills li:hover { background: rgba(0,180,216,0.2); transform: scale(1.05); }
+
+    .projects, .certificates {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: var(--azul-escuro);
+      border: 1px solid var(--ciano);
+      border-radius: 8px;
+      padding: 15px;
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      box-shadow: 0 0 15px rgba(0,180,216,0.3);
+      transform: translateY(-4px);
+    }
+
+    .btn-cv {
+      display: inline-block;
+      background-color: var(--ciano);
+      color: var(--azul-escuro);
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      transition: background 0.3s, transform 0.2s;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    .btn-cv:hover { background-color: var(--verde-limao); transform: scale(1.05); }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--azul-medio);
+      border-top: 2px solid var(--ciano);
+      margin-top: 40px;
+      color: var(--branco-gelo);
+    }
+    footer a { color: var(--ciano); text-decoration: none; margin: 0 8px; }
+    footer a:hover { color: var(--verde-limao); text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portfólio Victor</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#certificados">Certificados</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre mim</h2>
+    <p>Olá! Sou <strong>Victor Augusto</strong>, estudante de Ciência da Computação na Universidade Anhanguera de São Paulo, atualmente no 4º semestre (previsão de formatura: dezembro de 2027). Tenho interesse na área de dados, análise e tecnologia em nuvem.  
+    Já concluí cursos como <strong>AWS pela Escola da Nuvem</strong> e o curso profissionalizante <strong>Pro-Profissão Programação</strong>, e busco constante evolução técnica e prática.</p>
+    <p>Meu objetivo atual é conquistar uma oportunidade de <strong>estágio em TI</strong>, onde eu possa aplicar e expandir meus conhecimentos em ambientes reais e colaborativos.</p>
+    <a class="btn-cv" href="curriculo_victor.pdf" download>📄 Acessar Currículo</a>
+  </section>
+
+  <section id="habilidades" class="skills">
+    <h2>Habilidades</h2>
+    <ul>
+      <li>Python (Pandas, Numpy, PyAutoGUI, Selenium, Matplotlib, Seaborn)</li>
+      <li>MySQL</li>
+      <li>Power BI</li>
+      <li>Pacote Office</li>
+      <li>AWS</li>
+      <li>Estatística e Visualização de Dados</li>
+      <li>Machine Learning (básico)</li>
+    </ul>
+  </section>
+
+  <section id="projetos" class="projects">
+    <h2>Projetos</h2>
+    <div class="card">
+      <h3>Meu primeiro projeto</h3>
+      <p>Processo de ETL e de respostas práticas e importantes</p>
+      <a href="https://github.com/Victor2Perez/1-trabalho-Power-BI" target="_blank">Ver Projeto</a>
+    </div>
+    <div class="card">
+      <h3>Dashboard de Vendas</h3>
+      <p>Criação de dashboard interativo no Excel para treinar um pouco</p>
+      <a href="https://github.com/Victor2Perez/Analise-e-Dashboards-com-excel" target="_blank">Ver Projeto</a>
+    </div>
+    <div class="card">
+      <h3>Dashboard Clinica</h3>
+      <p>Analise de respectivos problemas e soluções para uma clinica.</p>
+      <a href="https://github.com/Victor2Perez/Analise-e-Dashboard-Clinica-PBI" target="_blank">Ver Projeto</a>
+    </div>
+  </section>
+
+  <section id="certificados" class="certificates">
+    <h2>Certificados</h2>
+    <div class="card">
+      <h3>Arquitetura cloud (2024)</h3>
+      <p>Palestra sobre AWS e sua evolução</p>
+      <a href="https://drive.google.com/file/d/1gJq3GZtOEvdKtwts5eEmamWVWVgl_X-P/view?usp=drive_link" target="_blank">Ver Certificado</a>
+    </div>
+    <div class="card">
+      <h3>AWS - Escola da Nuvem (2023)</h3>
+      <p>Curso introdutório sobre serviços da AWS e fundamentos de computação em nuvem.</p>
+      <a href="https://drive.google.com/file/d/1j05fI8GvojwYskQEFoe_mRynhcyIEo8l/view?usp=drive_link" target="_blank">Ver Certificado</a>
+    </div>
+    <div class="card">
+      <h3>Pro-Profissão Programação (2022)</h3>
+      <p>Formação profissionalizante com base em lógica de programação e fundamentos de TI.</p>
+      <a href="https://drive.google.com/file/d/15ZAVolN0ICVXGZk4tJIjkucKnmM0ow03/view?usp=drive_link" target="_blank">Ver Certificado</a>
+    </div>
+    <div class="card">
+      <h3>Banco de dados Oracle (2022)</h3>
+      <p>Introdução a banco de dados Oracle e análise de dados</p>
+      <a href="https://drive.google.com/file/d/1esc-eHidSxVZiNFVXa6eBbvgnnFkPXtH/view?usp=drive_link" target="_blank">Ver Certificado</a>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>📍 São Paulo - SP</p>
+    <p>📧 <a href="mailto:augustosantoperez@gmail.com.br">augustosantoperez@gmail.com</a><br>
+      📞 <a href="tel:+5511948425018">(11) 94842-5018</a><br>
+      🔗 <a href="https://www.linkedin.com/in/victor-as-perez/" target="_blank">LinkedIn</a> |
+      💻 <a href="https://github.com/Victor2Perez" target="_blank">GitHub</a>
+    </p>
+    <p>Idiomas: Inglês intermediário • Libras básico • Espanhol básico</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Portfólio_Victor. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+    const reveal = () => {
+      sections.forEach((section) => {
+        const top = section.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) { section.classList.add("visible"); }
+      });
+    };
+    window.addEventListener("scroll", reveal);
+    reveal();
+
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        const offset = target.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({ top: offset, behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
